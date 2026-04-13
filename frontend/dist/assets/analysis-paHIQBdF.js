@@ -1,0 +1,1 @@
+import{n as o}from"./index-tTVJSLJu.js";async function r(t){const{data:a}=await o.post("/analysis/reports",t);return a}async function e(t,a){const{data:s}=await o.post(`/analysis/literatures/${t}/topology`,a);return s}async function i(t){const{data:a}=await o.get(`/analysis/literatures/${t}/topology`);return a}export{i as a,e as b,r as g};

@@ -1,0 +1,99 @@
+<svg width="1280" height="920" viewBox="0 0 1280 920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+    <style>
+      .title { font: 700 30px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .subtitle { font: 600 20px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .text { font: 500 18px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .small { font: 500 15px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+      .line { fill: none; stroke: #111111; stroke-width: 2.2; }
+      .dash { fill: none; stroke: #111111; stroke-width: 1.8; stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="920" fill="#ffffff"/>
+
+  <text x="640" y="56" text-anchor="middle" class="title">药物研发辅助平台科研流程图</text>
+  <text x="640" y="90" text-anchor="middle" class="small">围绕文献处理、知识抽取、检索增强分析、人工复核与结果追溯构建平台流程</text>
+
+  <rect x="80" y="140" width="1120" height="130" rx="14" ry="14" class="box"/>
+  <text x="640" y="180" text-anchor="middle" class="subtitle">阶段一：研究资料输入</text>
+  <rect x="120" y="205" width="220" height="42" rx="8" ry="8" class="box"/>
+  <rect x="390" y="205" width="220" height="42" rx="8" ry="8" class="box"/>
+  <rect x="660" y="205" width="220" height="42" rx="8" ry="8" class="box"/>
+  <rect x="930" y="205" width="220" height="42" rx="8" ry="8" class="box"/>
+  <text x="230" y="232" text-anchor="middle" class="text">研究人员提交文献</text>
+  <text x="500" y="232" text-anchor="middle" class="text">系统登记基础元数据</text>
+  <text x="770" y="232" text-anchor="middle" class="text">保存文献与任务记录</text>
+  <text x="1040" y="232" text-anchor="middle" class="text">进入处理流程</text>
+
+  <rect x="80" y="320" width="1120" height="180" rx="14" ry="14" class="box"/>
+  <text x="640" y="360" text-anchor="middle" class="subtitle">阶段二：文献处理与知识准备</text>
+  <rect x="120" y="390" width="220" height="72" rx="10" ry="10" class="box"/>
+  <rect x="390" y="390" width="220" height="72" rx="10" ry="10" class="box"/>
+  <rect x="660" y="390" width="220" height="72" rx="10" ry="10" class="box"/>
+  <rect x="930" y="390" width="220" height="72" rx="10" ry="10" class="box"/>
+  <text x="230" y="420" text-anchor="middle" class="text">文本解析与清洗</text>
+  <text x="230" y="446" text-anchor="middle" class="small">提取正文并规范格式</text>
+  <text x="500" y="420" text-anchor="middle" class="text">文献分块</text>
+  <text x="500" y="446" text-anchor="middle" class="small">生成可检索文本片段</text>
+  <text x="770" y="420" text-anchor="middle" class="text">Embedding 向量化</text>
+  <text x="770" y="446" text-anchor="middle" class="small">调用本地 Ollama 模型</text>
+  <text x="1040" y="420" text-anchor="middle" class="text">Milvus 向量存储</text>
+  <text x="1040" y="446" text-anchor="middle" class="small">写回同步状态与数量</text>
+
+  <rect x="80" y="550" width="1120" height="180" rx="14" ry="14" class="box"/>
+  <text x="640" y="590" text-anchor="middle" class="subtitle">阶段三：知识抽取与增强分析</text>
+  <rect x="120" y="620" width="220" height="72" rx="10" ry="10" class="box"/>
+  <rect x="390" y="620" width="220" height="72" rx="10" ry="10" class="box"/>
+  <rect x="660" y="620" width="220" height="72" rx="10" ry="10" class="box"/>
+  <rect x="930" y="620" width="220" height="72" rx="10" ry="10" class="box"/>
+  <text x="230" y="650" text-anchor="middle" class="text">指标抽取</text>
+  <text x="230" y="676" text-anchor="middle" class="small">提取结局指标、时间点、变化值</text>
+  <text x="500" y="650" text-anchor="middle" class="text">人工复核</text>
+  <text x="500" y="676" text-anchor="middle" class="small">确认、驳回并记录备注</text>
+  <text x="770" y="650" text-anchor="middle" class="text">RAG 检索增强</text>
+  <text x="770" y="676" text-anchor="middle" class="small">融合关键词检索与语义检索</text>
+  <text x="1040" y="650" text-anchor="middle" class="text">LLM 综合分析</text>
+  <text x="1040" y="676" text-anchor="middle" class="small">生成报告摘要与引用证据</text>
+
+  <rect x="80" y="780" width="1120" height="100" rx="14" ry="14" class="box"/>
+  <text x="640" y="820" text-anchor="middle" class="subtitle">阶段四：结果展示与科研辅助</text>
+  <text x="240" y="854" text-anchor="middle" class="text">仪表盘统计与系统健康检查</text>
+  <text x="520" y="854" text-anchor="middle" class="text">文献块定位与证据回跳</text>
+  <text x="790" y="854" text-anchor="middle" class="text">知识图谱展示与状态筛选</text>
+  <text x="1060" y="854" text-anchor="middle" class="text">全流程任务跟踪与结果复用</text>
+
+  <line x1="340" y1="226" x2="390" y2="226" class="line" marker-end="url(#arrow)"/>
+  <line x1="610" y1="226" x2="660" y2="226" class="line" marker-end="url(#arrow)"/>
+  <line x1="880" y1="226" x2="930" y2="226" class="line" marker-end="url(#arrow)"/>
+
+  <line x1="640" y1="270" x2="640" y2="320" class="line" marker-end="url(#arrow)"/>
+
+  <line x1="340" y1="426" x2="390" y2="426" class="line" marker-end="url(#arrow)"/>
+  <line x1="610" y1="426" x2="660" y2="426" class="line" marker-end="url(#arrow)"/>
+  <line x1="880" y1="426" x2="930" y2="426" class="line" marker-end="url(#arrow)"/>
+
+  <line x1="640" y1="500" x2="640" y2="550" class="line" marker-end="url(#arrow)"/>
+
+  <line x1="340" y1="656" x2="390" y2="656" class="line" marker-end="url(#arrow)"/>
+  <line x1="610" y1="656" x2="660" y2="656" class="line" marker-end="url(#arrow)"/>
+  <line x1="880" y1="656" x2="930" y2="656" class="line" marker-end="url(#arrow)"/>
+
+  <line x1="640" y1="730" x2="640" y2="780" class="line" marker-end="url(#arrow)"/>
+
+  <path d="M 500 620 C 500 560, 1040 560, 1040 620" class="dash" marker-end="url(#arrow)"/>
+  <text x="770" y="548" text-anchor="middle" class="small">仅确认指标可进入高可信分析</text>
+
+  <path d="M 1040 692 C 1040 740, 500 740, 500 692" class="dash" marker-end="url(#arrow)"/>
+  <text x="770" y="754" text-anchor="middle" class="small">分析结果可反向辅助研究人员继续复核与追踪</text>
+
+  <rect x="1020" y="100" width="180" height="110" rx="10" ry="10" class="box"/>
+  <text x="1110" y="132" text-anchor="middle" class="text">支撑环境</text>
+  <text x="1110" y="158" text-anchor="middle" class="small">Spring Boot + Vue 3</text>
+  <text x="1110" y="182" text-anchor="middle" class="small">MySQL + Redis + Milvus</text>
+  <text x="1110" y="206" text-anchor="middle" class="small">DeepSeek + Ollama</text>
+</svg>

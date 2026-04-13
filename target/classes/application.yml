@@ -1,0 +1,57 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: aso-platform
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:drug_research_platform}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:123456}
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      database: ${REDIS_DATABASE:0}
+      timeout: 3s
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  cache:
+    type: redis
+
+platform:
+  ai:
+    model: deepseek-chat
+    provider: deepseek
+    base-url: https://api.deepseek.com
+    api-key: sk-8b5e4eef45db4ba1adbbc966af7f8442
+    embedding:
+      provider: ${EMBEDDING_PROVIDER:ollama}
+      model: ${EMBEDDING_MODEL:qwen3-embedding:4b}
+      base-url: ${EMBEDDING_BASE_URL:http://127.0.0.1:11434}
+      fallback-enabled: ${EMBEDDING_FALLBACK_ENABLED:true}
+  vector:
+    milvus:
+      enabled: ${MILVUS_ENABLED:true}
+      uri: ${MILVUS_URI:http://127.0.0.1:19530}
+      token: ${MILVUS_TOKEN:}
+      database-name: ${MILVUS_DATABASE:default}
+      collection-name: ${MILVUS_COLLECTION:literature_chunk_vectors}
+      primary-field-name: ${MILVUS_PRIMARY_FIELD:chunk_id}
+      literature-id-field-name: ${MILVUS_LITERATURE_FIELD:literature_id}
+      vector-field-name: ${MILVUS_VECTOR_FIELD:embedding}
+      metric-type: ${MILVUS_METRIC_TYPE:COSINE}
+      index-type: ${MILVUS_INDEX_TYPE:HNSW}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html

@@ -1,0 +1,1 @@
+import{n as e}from"./index-tTVJSLJu.js";async function r(){const{data:a}=await e.get("/knowledge-graph");return a}async function o(a){const{data:t}=await e.get(`/knowledge-graph/literatures/${a}`);return t}async function g(a){const{data:t}=await e.post("/knowledge-graph/query",a);return t}export{o as a,r as g,g as q};

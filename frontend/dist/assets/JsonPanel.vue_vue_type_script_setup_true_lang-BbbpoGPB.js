@@ -1,0 +1,1 @@
+import{d as t,c as s,t as a,m as c,o as l}from"./index-tTVJSLJu.js";const r={class:"mono-block"},_=t({__name:"JsonPanel",props:{value:{}},setup(o){const e=o,n=c(()=>JSON.stringify(e.value,null,2));return(p,i)=>(l(),s("div",r,a(n.value),1))}});export{_};

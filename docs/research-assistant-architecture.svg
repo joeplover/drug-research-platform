@@ -1,0 +1,65 @@
+<svg width="1200" height="840" viewBox="0 0 1200 840" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+    <style>
+      .title { font: 700 28px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .text { font: 500 20px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .small { font: 500 17px 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; fill: #111111; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+      .line { stroke: #111111; stroke-width: 2.2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="840" fill="#ffffff"/>
+
+  <text x="600" y="56" text-anchor="middle" class="title">药物研发辅助平台总体架构图</text>
+
+  <!-- 用户 -->
+  <rect x="80" y="300" width="180" height="80" rx="12" ry="12" class="box"/>
+  <text x="170" y="348" text-anchor="middle" class="text">科研用户</text>
+
+  <!-- 前端 -->
+  <rect x="340" y="230" width="220" height="230" rx="12" ry="12" class="box"/>
+  <text x="450" y="295" text-anchor="middle" class="text">前端展示层</text>
+  <text x="450" y="340" text-anchor="middle" class="small">Vue3</text>
+  <text x="450" y="376" text-anchor="middle" class="small">登录注册 / 首页看板</text>
+  <text x="450" y="412" text-anchor="middle" class="small">文献管理 / 检索问答</text>
+  <text x="450" y="448" text-anchor="middle" class="small">分析报告 / 图谱展示 / 用户管理</text>
+
+  <!-- 后端 -->
+  <rect x="650" y="180" width="260" height="320" rx="12" ry="12" class="box"/>
+  <text x="780" y="255" text-anchor="middle" class="text">业务服务层</text>
+  <text x="780" y="300" text-anchor="middle" class="small">Spring Boot</text>
+  <text x="780" y="336" text-anchor="middle" class="small">文献导入 / 解析 / 切片 / 向量化</text>
+  <text x="780" y="372" text-anchor="middle" class="small">RAG 检索增强 / 语义问答</text>
+  <text x="780" y="408" text-anchor="middle" class="small">指标抽取 / 报告生成</text>
+  <text x="780" y="444" text-anchor="middle" class="small">知识图谱 / 拓扑分析 / 任务日志</text>
+
+  <!-- 模型 -->
+  <rect x="970" y="150" width="180" height="150" rx="12" ry="12" class="box"/>
+  <text x="1060" y="205" text-anchor="middle" class="text">模型层</text>
+  <text x="1060" y="245" text-anchor="middle" class="small">DeepSeek 对话模型</text>
+  <text x="1060" y="281" text-anchor="middle" class="small">Ollama 嵌入模型</text>
+
+  <!-- 数据 -->
+  <rect x="970" y="370" width="180" height="150" rx="12" ry="12" class="box"/>
+  <text x="1060" y="405" text-anchor="middle" class="text">数据层</text>
+  <text x="1060" y="445" text-anchor="middle" class="small">MySQL 结构化数据</text>
+  <text x="1060" y="481" text-anchor="middle" class="small">Redis 缓存数据</text>
+
+  <!-- 底部流程 -->
+  <rect x="220" y="620" width="760" height="110" rx="12" ry="12" class="box"/>
+  <text x="600" y="665" text-anchor="middle" class="text">核心流程</text>
+  <text x="600" y="708" text-anchor="middle" class="small">文献导入 → 文本切片 → 向量检索 → 指标抽取 → 知识图谱 → 分析输出</text>
+
+  <!-- 连线 -->
+  <line x1="260" y1="340" x2="340" y2="340" class="line" marker-end="url(#arrow)"/>
+  <line x1="560" y1="340" x2="650" y2="340" class="line" marker-end="url(#arrow)"/>
+  <line x1="910" y1="280" x2="970" y2="225" class="line" marker-end="url(#arrow)"/>
+  <line x1="910" y1="410" x2="970" y2="445" class="line" marker-end="url(#arrow)"/>
+  <line x1="780" y1="500" x2="780" y2="580" class="line"/>
+  <line x1="780" y1="580" x2="600" y2="580" class="line"/>
+  <line x1="600" y1="580" x2="600" y2="620" class="line" marker-end="url(#arrow)"/>
+</svg>
