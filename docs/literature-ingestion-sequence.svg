@@ -1,0 +1,62 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#111111"/>
+    </marker>
+    <style>
+      .title { font: 700 28px 'Microsoft YaHei', Arial, sans-serif; fill: #111111; }
+      .head { font: 700 18px 'Microsoft YaHei', Arial, sans-serif; fill: #111111; }
+      .text { font: 500 16px 'Microsoft YaHei', Arial, sans-serif; fill: #111111; }
+      .line { stroke: #111111; stroke-width: 2.2; fill: none; }
+      .dash { stroke: #111111; stroke-width: 1.7; fill: none; stroke-dasharray: 8 6; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <text x="700" y="50" text-anchor="middle" class="title">文献入库与向量化时序图</text>
+
+  <rect x="90" y="90" width="150" height="50" rx="10" ry="10" class="box"/><text x="165" y="122" text-anchor="middle" class="head">用户</text>
+  <rect x="310" y="90" width="170" height="50" rx="10" ry="10" class="box"/><text x="395" y="122" text-anchor="middle" class="head">前端页面</text>
+  <rect x="560" y="90" width="220" height="50" rx="10" ry="10" class="box"/><text x="670" y="122" text-anchor="middle" class="head">LiteratureService</text>
+  <rect x="850" y="90" width="240" height="50" rx="10" ry="10" class="box"/><text x="970" y="122" text-anchor="middle" class="head">LiteratureIngestionService</text>
+  <rect x="1150" y="90" width="170" height="50" rx="10" ry="10" class="box"/><text x="1235" y="122" text-anchor="middle" class="head">解析与嵌入服务</text>
+
+  <line x1="165" y1="140" x2="165" y2="830" class="dash"/>
+  <line x1="395" y1="140" x2="395" y2="830" class="dash"/>
+  <line x1="670" y1="140" x2="670" y2="830" class="dash"/>
+  <line x1="970" y1="140" x2="970" y2="830" class="dash"/>
+  <line x1="1235" y1="140" x2="1235" y2="830" class="dash"/>
+
+  <line x1="165" y1="190" x2="395" y2="190" class="line" marker-end="url(#arrow)"/>
+  <text x="280" y="178" text-anchor="middle" class="text">输入路径或文献信息</text>
+
+  <line x1="395" y1="250" x2="670" y2="250" class="line" marker-end="url(#arrow)"/>
+  <text x="533" y="238" text-anchor="middle" class="text">创建文献记录 / 导入文件</text>
+
+  <line x1="395" y1="330" x2="970" y2="330" class="line" marker-end="url(#arrow)"/>
+  <text x="682" y="318" text-anchor="middle" class="text">触发 ingest(literatureId)</text>
+
+  <line x1="970" y1="400" x2="1235" y2="400" class="line" marker-end="url(#arrow)"/>
+  <text x="1102" y="388" text-anchor="middle" class="text">extractText(path, sourceType)</text>
+
+  <line x1="1235" y1="460" x2="970" y2="460" class="line" marker-end="url(#arrow)"/>
+  <text x="1102" y="448" text-anchor="middle" class="text">返回全文文本</text>
+
+  <line x1="970" y1="530" x2="1235" y2="530" class="line" marker-end="url(#arrow)"/>
+  <text x="1102" y="518" text-anchor="middle" class="text">chunk(content) + embed(chunk)</text>
+
+  <line x1="1235" y1="590" x2="970" y2="590" class="line" marker-end="url(#arrow)"/>
+  <text x="1102" y="578" text-anchor="middle" class="text">返回切片与向量结果</text>
+
+  <line x1="970" y1="660" x2="395" y2="660" class="line" marker-end="url(#arrow)"/>
+  <text x="682" y="648" text-anchor="middle" class="text">保存 literature_chunk 并返回结果</text>
+
+  <line x1="395" y1="730" x2="165" y2="730" class="line" marker-end="url(#arrow)"/>
+  <text x="280" y="718" text-anchor="middle" class="text">展示分块与向量化完成状态</text>
+
+  <rect x="660" y="228" width="20" height="60" class="box"/>
+  <rect x="960" y="308" width="20" height="380" class="box"/>
+  <rect x="1225" y="380" width="20" height="230" class="box"/>
+
+  <text x="700" y="860" text-anchor="middle" class="text">说明：该流程对应 LiteratureService、LiteratureIngestionService、DocumentParserService、LiteratureChunkingService 和 ChunkEmbeddingService 的实际实现。</text>
+</svg>

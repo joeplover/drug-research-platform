@@ -1,0 +1,60 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: 700 28px 'Microsoft YaHei', Arial, sans-serif; fill: #111111; }
+      .text { font: 500 18px 'Microsoft YaHei', Arial, sans-serif; fill: #111111; }
+      .small { font: 500 16px 'Microsoft YaHei', Arial, sans-serif; fill: #111111; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+      .line { stroke: #111111; stroke-width: 2.2; fill: none; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <text x="700" y="52" text-anchor="middle" class="title">前端功能模块图</text>
+
+  <rect x="520" y="80" width="360" height="90" rx="12" ry="12" class="box"/>
+  <text x="700" y="132" text-anchor="middle" class="text">Vue3 前端应用</text>
+
+  <rect x="120" y="250" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="240" y="303" text-anchor="middle" class="text">登录注册模块</text>
+
+  <rect x="420" y="250" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="540" y="303" text-anchor="middle" class="text">首页总览模块</text>
+
+  <rect x="720" y="250" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="840" y="303" text-anchor="middle" class="text">文献管理模块</text>
+
+  <rect x="1020" y="250" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="1140" y="303" text-anchor="middle" class="text">用户管理模块</text>
+
+  <rect x="120" y="470" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="240" y="523" text-anchor="middle" class="text">指标抽取模块</text>
+
+  <rect x="420" y="470" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="540" y="523" text-anchor="middle" class="text">分析报告模块</text>
+
+  <rect x="720" y="470" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="840" y="523" text-anchor="middle" class="text">拓扑分析模块</text>
+
+  <rect x="1020" y="470" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="1140" y="523" text-anchor="middle" class="text">知识图谱模块</text>
+
+  <rect x="420" y="680" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="540" y="733" text-anchor="middle" class="text">任务与日志模块</text>
+
+  <rect x="720" y="680" width="240" height="90" rx="12" ry="12" class="box"/>
+  <text x="840" y="733" text-anchor="middle" class="text">API 模块与状态管理</text>
+
+  <line x1="700" y1="170" x2="240" y2="250" class="line"/>
+  <line x1="700" y1="170" x2="540" y2="250" class="line"/>
+  <line x1="700" y1="170" x2="840" y2="250" class="line"/>
+  <line x1="700" y1="170" x2="1140" y2="250" class="line"/>
+
+  <line x1="240" y1="340" x2="240" y2="470" class="line"/>
+  <line x1="540" y1="340" x2="540" y2="470" class="line"/>
+  <line x1="840" y1="340" x2="840" y2="470" class="line"/>
+  <line x1="1140" y1="340" x2="1140" y2="470" class="line"/>
+  <line x1="540" y1="560" x2="540" y2="680" class="line"/>
+  <line x1="840" y1="560" x2="840" y2="680" class="line"/>
+
+  <text x="700" y="840" text-anchor="middle" class="small">说明：该图根据前端 router、views、api 和 store 的实际结构绘制，用于说明页面模块划分。</text>
+</svg>
